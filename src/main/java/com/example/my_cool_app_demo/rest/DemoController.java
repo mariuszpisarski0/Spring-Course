@@ -13,10 +13,12 @@ public class DemoController {
     private Coach coach;
     private Animal houseAnimal;
     private Animal wildAnimal;
+    private Animal primaryAnimal;
 
     @Autowired
-    DemoController(Coach coach) {
+    DemoController(Coach coach, Animal animal) {
         this.coach = coach;
+        this.primaryAnimal = animal;
     }
 
     @Autowired
@@ -42,5 +44,10 @@ public class DemoController {
     @GetMapping("/house")
     public String getHouseAnimalRace() {
         return this.houseAnimal.getRace();
+    }
+
+    @GetMapping("/primary")
+    public String getPrimaryAnimalRace() {
+        return primaryAnimal.getRace();
     }
 }
