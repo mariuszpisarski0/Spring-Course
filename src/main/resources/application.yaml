@@ -1,11 +1,19 @@
 spring:
   application:
     name: my_cool_app_demo
+  security:
+    user:
+      name: "user"
+      password: "qwerty"
+
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+        exclude:
+          - info
+          - health
 
 ## Configuring info endpoint
   info:
@@ -13,6 +21,7 @@ management:
       enabled: true
     env:
       enabled: true
+
 
 info:
   app:
