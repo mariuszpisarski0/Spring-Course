@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: my_cool_app_demo
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+## Configuring info endpoint
+  info:
+    java:
+      enabled: true
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "asd Sample Application"
+    description: "this is my first spring boot application"
+    version: "1.0.0"
+
+
+
+
+
