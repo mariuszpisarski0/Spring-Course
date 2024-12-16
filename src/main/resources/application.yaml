@@ -30,6 +30,18 @@ info:
     version: "1.0.0"
 
 
+server:
+  port: 8080
+  servlet:
+    context-path: /v1
+
+
+coach:
+  name: "Aron"
+team:
+  name: "teeeeeeem"
+
+
 
 
 
