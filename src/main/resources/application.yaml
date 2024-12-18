@@ -6,40 +6,11 @@ spring:
       name: "user"
       password: "qwerty"
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-        exclude:
-          - info
-          - health
-
-## Configuring info endpoint
-  info:
-    java:
-      enabled: true
-    env:
-      enabled: true
-
-
-info:
-  app:
-    name: "asd Sample Application"
-    description: "this is my first spring boot application"
-    version: "1.0.0"
-
 
 server:
   port: 8080
   servlet:
     context-path: /v1
-
-
-coach:
-  name: "Aron"
-team:
-  name: "teeeeeeem"
 
 
 
