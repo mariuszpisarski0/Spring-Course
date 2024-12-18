@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 
+    private Animal anotherPrimaryAnimal;
     private Coach coach;
     private Animal houseAnimal;
     private Animal wildAnimal;
@@ -19,6 +20,7 @@ public class DemoController {
     DemoController(Coach coach, Animal animal) {
         this.coach = coach;
         this.primaryAnimal = animal;
+        this.anotherPrimaryAnimal = animal;
     }
 
     @Autowired
@@ -49,5 +51,10 @@ public class DemoController {
     @GetMapping("/primary")
     public String getPrimaryAnimalRace() {
         return primaryAnimal.getRace();
+    }
+
+    @GetMapping("/check")
+    public String checkScope() {
+        return "primaryAnimal vs anotherPrimaryAnimal: " + (primaryAnimal == anotherPrimaryAnimal);
     }
 }
